@@ -3,7 +3,7 @@ Modal java script
 */
 function open_modal(){
 	$("#basic-modal-content").modal({onClose: function (dialog) {
-			$("#basic-modal-content").html = '';
+			document.getElementById("basic-modal-content").innerHTML = '';
 			$.modal.close();	
 		}});
 }
