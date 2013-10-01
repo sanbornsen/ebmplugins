@@ -19,7 +19,7 @@ function select_gender(el,link){
   open_modal();
 }
 
-function get_result(val,link){
+/*function get_result(val,link){
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -45,7 +45,20 @@ xmlhttp.open("POST","http://vindowshop.com:5201/fetchprod",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send('["'+link+'","'+val+'",600,600,0,0,100,100]');
 }
+*/
 
+function get_result(val, link){
+  $.ajax({
+      type: "POST",
+      url: "http://vindowshop.com:5201/fetchprod",
+        data: ('["'+link+'","'+val+'",600,600,0,0,100,100]'),
+        success: function(msg) {
+          alert(msg);
+      }
+    });
+  }
+
+}
 
 function lights_in(el){
 	el.setAttribute('style','opacity:1.0;position: absolute; z-index: 1; top: 15px; right: 30px; max-height:40px');
