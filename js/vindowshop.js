@@ -20,6 +20,8 @@ function select_gender(el,link){
 }
 
 function get_result(val,link){
+var el = document.getElementById("basic-modal-content");
+el.innerHTML = '<img src="http://www.vindowshop.com/ebmplugins/img/ajax-loader.gif">';
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -38,7 +40,7 @@ xmlhttp.onreadystatechange=function()
     	new_html += "<img style='padding:5px;max-height:150px; max-width:100px' src='http://www.beta.vindowshop.com"+data[i]+"'>";
     }
     new_html += '</div>';
-    document.getElementById("basic-modal-content").innerHTML=new_html;
+    el.innerHTML=new_html;
     }
   }
 xmlhttp.open("POST","http://vindowshop.com:5201/fetchprod",true);
