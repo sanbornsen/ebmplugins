@@ -3,11 +3,8 @@ Modal java script
 */
 function open_modal(){
 	$("#basic-modal-content").modal({onClose: function (dialog) {
-			el = document.getElementById("basic-modal-content");
-      alert(el.innerHTML);
-      el.innerHTML = '';
-      alert(el.innerHTML);
-			$.modal.close();	
+			$("#basic-modal-content").css('display','none');
+      $.modal.close();	
 		}});
 }
 /*
