@@ -55,10 +55,9 @@ function get_result(val, link){
         success: function(msg) {
           alert(msg);
       }
-    });
-  }
-
+  });
 }
+
 
 function lights_in(el){
 	el.setAttribute('style','opacity:1.0;position: absolute; z-index: 1; top: 15px; right: 30px; max-height:40px');
