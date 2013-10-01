@@ -21,7 +21,7 @@ function select_gender(el,link){
 
 function get_result(val,link){
 var el = document.getElementById("basic-modal-content");
-el.innerHTML = '<img src="http://www.vindowshop.com/ebmplugins/img/ajax-loader.gif">';
+el.innerHTML = '<center><img src="http://www.vindowshop.com/ebmplugins/img/ajax-loader.gif"></center>';
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
