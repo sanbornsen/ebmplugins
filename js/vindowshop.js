@@ -43,7 +43,7 @@ xmlhttp.onreadystatechange=function()
     el.innerHTML=new_html;
     }
   }
-xmlhttp.open("POST","http://vindowshop.com:5201/fetchprod",true);
+xmlhttp.open("POST","http://vindowshop.com:5201/fetchprodauto",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 //xmlhttp.send('["'+link+'","'+val+'",600,600,0,0,100,100]');
 xmlhttp.send('["'+link+'","'+val+'"]');
