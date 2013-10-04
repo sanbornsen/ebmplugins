@@ -37,7 +37,7 @@ xmlhttp.onreadystatechange=function()
     var data = jQuery.parseJSON(xmlhttp.responseText);
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
-    	new_html += "<img style='padding:5px;max-height:150px; max-width:100px' src='http://www.beta.vindowshop.com"+data[i]+"'>";
+    	new_html += "<img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com"+data[i]+"'>";
     }
     new_html += '</div>';
     el.innerHTML=new_html;
