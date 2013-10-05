@@ -38,9 +38,9 @@ xmlhttp.onreadystatechange=function()
     string = replaceAll('"','',string);
     string = replaceAll("'",'"',string);
     var data = JSON.parse(string);
-    var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
+    var new_html = "<!-- Modal content goes here --><div style='height:350px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
-    	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/"+data[i].Imagepath+"'></a>";
+    	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/resized_images/"+data[i].Imagepath+"'></a>";
     }
     new_html += '</div>';
     el.innerHTML=new_html;
