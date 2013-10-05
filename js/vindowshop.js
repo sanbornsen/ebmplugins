@@ -35,6 +35,7 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     var string = xmlhttp.responseText;
+    alert(string);
     alert(replaceAll("'",'"',string));
     var data = JSON.parse(replaceAll("'",'"',string));
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
