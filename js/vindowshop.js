@@ -35,9 +35,10 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     var string = xmlhttp.responseText;
+    string = replaceAll('"','',string);
+    string = replaceAll("'",'"',string);
     alert(string);
-    alert(replaceAll("'",'"',string));
-    var data = JSON.parse(replaceAll("'",'"',string));
+    var data = JSON.parse(string);
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
     	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/"+data[i].Imagepath+"'></a>";
