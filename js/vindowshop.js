@@ -37,7 +37,7 @@ xmlhttp.onreadystatechange=function()
     var string = xmlhttp.responseText;
     string = replaceAll('"','',string);
     string = replaceAll("'",'"',string);
-    alert(string);
+    alert(string[0].Imagepath);
     var data = JSON.parse(string);
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
