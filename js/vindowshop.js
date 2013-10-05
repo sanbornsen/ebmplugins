@@ -37,8 +37,8 @@ xmlhttp.onreadystatechange=function()
     var string = xmlhttp.responseText;
     string = replaceAll('"','',string);
     string = replaceAll("'",'"',string);
-    alert(string[0].Imagepath);
     var data = JSON.parse(string);
+    alert(string[0].Imagepath );
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
     	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/"+data[i].Imagepath+"'></a>";
