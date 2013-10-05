@@ -34,10 +34,10 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    var data = jQuery.parseJSON(xmlhttp.responseText);
+    var data = JSON.parse(replaceAll("'",'"',xmlhttp.responseText));
     var new_html = "<!-- Modal content goes here --><div style='height:300px;overflow:auto'>";
     for(var i=0;i<data.length;i++){
-    	new_html += "<img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com"+data[i]+"'>";
+    	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/"+data[i].Imagepath+"'></a>";
     }
     new_html += '</div>';
     el.innerHTML=new_html;
@@ -49,7 +49,9 @@ xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send('["'+link+'","'+val+'"]');
 }
 
-
+function replaceAll(find, replace, str) {
+  return str.replace(new RegExp(find, 'g'), replace);
+}
 
 function lights_in(el){
 	el.setAttribute('style','opacity:1.0;position: absolute; z-index: 1; top: 15px; right: 30px; max-height:40px');
