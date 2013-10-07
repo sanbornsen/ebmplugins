@@ -38,9 +38,21 @@ xmlhttp.onreadystatechange=function()
     string = replaceAll('"','',string);
     string = replaceAll("'",'"',string);
     var data = JSON.parse(string);
-    var new_html = "<!-- Modal content goes here --><div style='height:350px;overflow:auto'>";
+    var data_cat = new Array();
+    var cat_array = new Array();
     for(var i=0;i<data.length;i++){
-    	new_html += "<a target='_blank' href='"+data[i].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/resized_images/"+data[i].Imagepath+"'></a>";
+      if(inArray(data[i].Category,cat_array) == 'not found'){
+        cat_array.push(data[i].Category);
+        data_cat[data[i].Category] = new Array();
+      }
+      data_cat[data[i].Category].push(data[i]);
+    }
+    var new_html = "<!-- Modal content goes here --><div style='height:350px;overflow:auto'>";
+    for(var i=0;i<cat_array.length;i++){
+      new_html += '<h1>'+cat_array[i]+'</h1>';
+      for(var j=0;j<data_cat[cat_array[i]].length;j++){
+    	 new_html += "<a target='_blank' href='"+data_cat[cat_array[i]][j].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/resized_images/"+data_cat[cat_array[i]][j].Imagepath+"'></a>";
+      }
     }
     new_html += '</div>';
     el.innerHTML=new_html;
