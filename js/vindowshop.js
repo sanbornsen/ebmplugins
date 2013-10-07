@@ -53,6 +53,7 @@ xmlhttp.onreadystatechange=function()
       for(var j=0;j<data_cat[cat_array[i]].length;j++){
     	 new_html += "<a target='_blank' href='"+data_cat[cat_array[i]][j].URL+"'><img style='padding:5px;max-height:250px; max-width:200px' src='http://www.beta.vindowshop.com/Data/resized_images/"+data_cat[cat_array[i]][j].Imagepath+"'></a>";
       }
+      new_html += '<hr>;
     }
     new_html += '</div>';
     el.innerHTML=new_html;
