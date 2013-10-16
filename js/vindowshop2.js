@@ -68,7 +68,7 @@ function getpoints(elem,link){
 	
 	    //alert(tl['top']);alert(img_top);alert(img_height);
             
-            htm = '<img onclick="javascript:get_result_from_point(\''+link+'\',\''+coordinates[k]+'\',this)" src="http://eyeballme.co/ebmtool_logo.png" style="cursor:pointer;max-height:30px; opacity:.5; max-width:30px; position: absolute; z-index: 1000; left: '+left+'px; top: '+top+'px;">';
+            htm = '<img onclick="javascript:get_result_from_point(\''+link+'\',\''+coordinates[k]+'\',this)" src="http://eyeballme.co/ebmtool_pointer.png" style="cursor:pointer;max-height:30px; opacity:.5; max-width:30px; position: absolute; z-index: 1000; left: '+left+'px; top: '+top+'px;">';
             prev_htm += htm;
 	    //alert(prev_htm);
           }
@@ -83,7 +83,7 @@ function getpoints(elem,link){
 
 
 function get_result_from_point(link,index,el){
-	document.getElementById("basic-modal-content").innerHTML = '<center><img src="http://www.vindowshop.com/ebmplugins/img/ajax-loader.gif"></center>';
+	//document.getElementById("basic-modal-content").innerHTML = '<center><img src="http://www.vindowshop.com/ebmplugins/img/ajax-loader.gif"></center>';
 	var xmlhttp;
 	if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
   		xmlhttp=new XMLHttpRequest();
