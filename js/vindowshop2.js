@@ -12,8 +12,10 @@ End of modal javascript
 */
 
 function select_gender(i,link){
-  var img = document.body.getElementsByTagName("img"); 
-  var el = img[i];
+  //alert(link);
+  clear_marker();
+  var img = document.body.getElementsByTagName("img");
+  var el = img[parseInt(i)];
   getpoints(el,link);
   /*open_modal();
   var modal_el = document.getElementById("basic-modal-content");
@@ -35,6 +37,12 @@ function getPageTopLeft(el) {
 
  }
 
+function clear_marker(){
+	document.getElementById('markers').innerHTML = '';
+
+}
+
+
 
 function getpoints(elem,link){
   var id = 1;
@@ -43,7 +51,7 @@ function getpoints(elem,link){
 //point.style.left = parseFloat(point.style.left)+tl['left']; 
   var img_height = parseFloat(elem.clientHeight);
   var img_width = parseFloat(elem.clientWidth);
-  var prev_htm = "";  
+  var prev_htm = '';  
   var xmlhttp;
   if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
       xmlhttp=new XMLHttpRequest();
