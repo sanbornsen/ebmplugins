@@ -11,8 +11,11 @@ function open_modal(){
 End of modal javascript
 */
 
-function select_gender(el,link){
-	alert(el.src);
+function select_gender(i,link){
+  var img = document.body.getElementsByTagName("img");
+  alert(i);
+  //var el = img[i];
+	//alert(el.src);
   //getpoints(el,link);
   /*open_modal();
   var modal_el = document.getElementById("basic-modal-content");
