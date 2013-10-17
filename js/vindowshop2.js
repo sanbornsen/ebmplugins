@@ -68,7 +68,7 @@ function getpoints(elem,link){
           for(var k=0;k<coordinates.length;k++){
             var str = coordinates[k].split(" ");
             var pre_left = parseInt(str[1])+15;
-            var pre_top = parseInt(str[0])+10;
+            var pre_top = parseInt(str[0])+8;
             var img_top = parseFloat((img_height*pre_top)/100);
             var img_left = parseFloat((img_width*pre_left)/100); 
             var top = img_top+tl['top'];
