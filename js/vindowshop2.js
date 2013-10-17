@@ -76,7 +76,7 @@ function getpoints(elem,link){
 	
 	    //alert(tl['top']);alert(img_top);alert(img_height);
             
-            htm = '<img onclick="javascript:get_result_from_point(\''+link+'\',\''+coordinates[k]+'\',this)" src="http://eyeballme.co/ebmtool_pointer.png" style="cursor:pointer;max-height:20px; opacity:.9; position: absolute; z-index: 1000; left: '+left+'px; top: '+top+'px;">';
+            htm = '<img onclick="javascript:get_result_from_point(\''+link+'\',\''+coordinates[k]+'\',this)" src="http://eyeballme.co/ebmtool_pointer.png" style="cursor:pointer;max-height:15px; opacity:.9; position: absolute; z-index: 1000; left: '+left+'px; top: '+top+'px;">';
             prev_htm += htm;
 	    //alert(prev_htm);
           }
